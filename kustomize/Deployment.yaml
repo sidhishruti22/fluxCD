@@ -23,15 +23,15 @@ spec:
           ports:
             - containerPort: 3306
               name: mysql    
-#          volumeMounts:
-#            - name: mysql-persistent-storage
-#              mountPath: /var/lib/mysql    
+          volumeMounts:
+            - name: mysql-persistent-storage
+              mountPath: /var/lib/mysql    
 #            - name: database-creation
 #              mountPath: /docker-entrypoint-initdb.d
-#      volumes: 
-#        - name: mysql-persistent-storage
-#          persistentVolumeClaim:
-#            claimName: django-pv-claim1
+      volumes: 
+        - name: mysql-persistent-storage
+          persistentVolumeClaim:
+            claimName: django-pv-claim1
 #        - name: database-creation
 #          configMap:
 #            name: database-creation
